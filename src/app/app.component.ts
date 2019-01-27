@@ -5,6 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'first-app';
+
+  username:string = '';
+  allowDisplayDetails: boolean = false;
+  clicks: Array<Date> = [ ];
+
+  onDisplayClick() {
+    this.allowDisplayDetails = !this.allowDisplayDetails;
+    // this.clicks.push(this.clicks.length + 1);
+    this.clicks.push(new Date());
+  }
 }
